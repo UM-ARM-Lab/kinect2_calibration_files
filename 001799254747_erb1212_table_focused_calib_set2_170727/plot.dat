@@ -1,0 +1,42 @@
+# Columns:
+# 1: X
+# 2: Y
+# 3: computed depth
+# 4: measured depth
+# 5: difference between computed and measured depth
+# frame: ./0000_depth.png
+# frame: ./0000_sync_depth.png
+# frame: ./0001_depth.png
+# frame: ./0001_sync_depth.png
+# frame: ./0002_depth.png
+# frame: ./0002_sync_depth.png
+# frame: ./0003_depth.png
+# frame: ./0003_sync_depth.png
+# frame: ./0004_depth.png
+# frame: ./0004_sync_depth.png
+# frame: ./0005_depth.png
+# frame: ./0005_sync_depth.png
+# frame: ./0006_depth.png
+# frame: ./0006_sync_depth.png
+# frame: ./0007_depth.png
+# frame: ./0007_sync_depth.png
+# frame: ./0008_depth.png
+# frame: ./0008_sync_depth.png
+# frame: ./0009_depth.png
+# frame: ./0009_sync_depth.png
+# frame: ./0010_depth.png
+# frame: ./0010_sync_depth.png
+# frame: ./0011_depth.png
+# frame: ./0011_sync_depth.png
+# frame: ./0012_depth.png
+# frame: ./0012_sync_depth.png
+# frame: ./0013_depth.png
+# frame: ./0013_sync_depth.png
+# frame: ./0014_depth.png
+# frame: ./0014_sync_depth.png
+# frame: ./0015_depth.png
+# frame: ./0015_sync_depth.png
+# frame: ./0016_depth.png
+# frame: ./0016_sync_depth.png
+# frame: ./0017_sync_depth.png
+# frame: ./0018_sync_depth.png
