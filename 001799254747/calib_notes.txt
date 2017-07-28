@@ -1,2 +1,2 @@
 calibration performed in ERBII 1239 using 5x7x0.03 BAG 170725
-001799254747
+calib_pose.yaml translation x value modified manually
