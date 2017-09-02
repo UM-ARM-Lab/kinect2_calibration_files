@@ -1,0 +1,18 @@
+<launch>
+
+    <machine name="victorbackpack" address="victorbackpack.local"/>
+
+    <include file="$(find kinect2_bridge)/launch/kinect2_bridge.launch">
+        <arg name="base_name"       value="kinect2_roof"/>
+        <arg name="publish_tf"      value="true"/>
+        <arg name="fps_limit"       value="10"/>
+        <arg name="calib_path"      value="$(find kinect2_calibration_files)/data"/>
+        <!--arg name="depth_method"    value="opencl"/-->
+        <!--arg name="reg_method"      value="cpu"/-->
+        <!--arg name="queue_size"      value="5"/-->
+        <!--arg name="worker_threads"  value="4"/-->
+        <arg name="machine"         value="victorbackpack"/>
+        <arg name="use_machine"     value="true"/>
+    </include>
+
+</launch>
