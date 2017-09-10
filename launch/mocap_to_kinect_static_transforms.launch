@@ -22,7 +22,10 @@
          that the kinect2_bridge data uses as its reference. It was calculated using
          the above transforms and the transform between "kinect2_link" and
          "kinect2_ir_optical_frame" as published by kinect2_bridge -->
-    <node pkg="tf" type="static_transform_publisher" name="kinect2_roof_tf_broadcaster" required="true" args="0.031008404506653   0.021057223721192  -0.016030148860467   -0.506193991453260   0.500387254594431  -0.495676785109921   0.497679377872098       /mocap_Kinect2BlockRoof_Kinect2BlockRoof   /kinect2_roof_link  10">
+    <!--<node pkg="tf" type="static_transform_publisher" name="kinect2_roof_tf_broadcaster" required="true" args="0.031008404506653   0.021057223721192  -0.016030148860467   -0.506193991453260   0.500387254594431  -0.495676785109921   0.497679377872098       /mocap_Kinect2BlockRoof_Kinect2BlockRoof   /kinect2_roof_link  10">-->
+
+    <!-- These values were tweaked to visually match better for the MPS project-->
+    <node pkg="tf" type="static_transform_publisher" name="kinect2_roof_tf_broadcaster" required="true" args="0.031008404506653   0.021057223721192  -0.038030148860467         -0.498705262037172   0.502904727775816  -0.493174971239427   0.505132006647924       /mocap_Kinect2BlockRoof_Kinect2BlockRoof   /kinect2_roof_link  10">
         <param name="use_sim_time" value="$(arg use_sim_time)"/>
     </node>
 
