@@ -25,7 +25,8 @@
     <!--<node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_roof_tf_broadcaster" required="true" args="0.031008404506653   0.021057223721192  -0.016030148860467   -0.506193991453260   0.500387254594431  -0.495676785109921   0.497679377872098       /mocap_Kinect2BlockRoof_Kinect2BlockRoof   /kinect2_roof_link">-->
 
     <!-- These values were tweaked to visually match better for the MPS project-->
-    <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_roof_tf_broadcaster" required="true" args="0.031008404506653   0.021057223721192  -0.044030148860467         -0.498705262037172   0.502904727775816  -0.493174971239427   0.505132006647924       /mocap_Kinect2BlockRoof_Kinect2BlockRoof   /kinect2_roof_link">
+    <node pkg="tf" type="static_transform_publisher" name="kinect2_roof_tf_broadcaster" required="true"
+          args="0.031008404506653   0.021057223721192  -0.042030148860467        0.499966532285212  -0.504136092343149   0.491916169558652  -0.503883666254844    /mocap_Kinect2BlockRoof_Kinect2BlockRoof   /kinect2_roof_link 10">
         <param name="use_sim_time" value="$(arg use_sim_time)"/>
     </node>
 
