@@ -2,6 +2,8 @@
     <arg name="base_name"         default="kinect2"/>
     <arg name="publish_tf"        default="false"/>
     <arg name="fps_limit"         default="-1.0"/>
+    <arg name="depth_method"      default="default"/>
+    <arg name="reg_method"        default="default"/>
 
     <!-- This script assumes exactly 3 arguments, if that ever changes this and "rerun_kinect_launch_file" must change in sync-->
     <node pkg="kinect2_calibration_files"
@@ -9,6 +11,8 @@
           name="$(anon kinect2_bridge_respawner)"
           args="base_name:=$(arg base_name)
                 publish_tf:=$(arg publish_tf)
-                fps_limit:=$(arg fps_limit)">
+                fps_limit:=$(arg fps_limit)
+                depth_method:=$(arg depth_method)
+                reg_method:=$(arg reg_method)">
     </node>
 </launch>
