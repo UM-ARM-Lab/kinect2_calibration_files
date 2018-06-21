@@ -1,5 +1,6 @@
 <launch>
     <arg name="base_name"         default="kinect2"/>
+    <arg name="sensor"            default=""/>
     <arg name="publish_tf"        default="false"/>
     <arg name="fps_limit"         default="-1.0"/>
     <arg name="depth_method"      default="default"/>
@@ -10,6 +11,7 @@
           type="kinect2_respawn_hack_step2.sh"
           name="$(anon kinect2_bridge_respawner)"
           args="base_name:=$(arg base_name)
+                sensor:=$(arg sensor)
                 publish_tf:=$(arg publish_tf)
                 fps_limit:=$(arg fps_limit)
                 depth_method:=$(arg depth_method)
