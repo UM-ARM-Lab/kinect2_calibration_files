@@ -4,7 +4,7 @@
         <arg name="base_name"       value="kinect2_victor_head"/>
         <arg name="sensor"          value="000792364047"/>
         <arg name="publish_tf"      value="true"/>
-        <arg name="fps_limit"       value="10"/>
+        <arg name="fps_limit"       value="30"/>
         <!--<arg name="depth_method"    value="cuda"/>-->
         <!--<arg name="reg_method"      value="opencl"/>-->
     </include>
