@@ -5,7 +5,9 @@
     <arg name="fps_limit"         default="-1.0"/>
     <arg name="depth_method"      default="default"/>
     <arg name="reg_method"        default="default"/>
-
+    <arg name="use_png"           default="false"/>
+    <arg name="png_level"         default="1"/>
+    
     <!-- This script assumes exactly 3 arguments, if that ever changes this and "rerun_kinect_launch_file" must change in sync-->
     <node pkg="kinect2_calibration_files"
           type="kinect2_respawn_hack_step2.sh"
@@ -15,6 +17,8 @@
                 publish_tf:=$(arg publish_tf)
                 fps_limit:=$(arg fps_limit)
                 depth_method:=$(arg depth_method)
-                reg_method:=$(arg reg_method)">
+                reg_method:=$(arg reg_method)
+                use_png:=$(arg use_png)
+                png_level:=$(arg png_level)">
     </node>
 </launch>
