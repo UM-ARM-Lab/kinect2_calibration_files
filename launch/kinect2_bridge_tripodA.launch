@@ -1,5 +1,5 @@
 <launch>
-
+  <arg name="fps_limit" default="30"/>
     <include file="$(find kinect2_calibration_files)/launch/kinect2_respawn_hack_step1.launch">
         <arg name="base_name"       value="kinect2_tripodA"/>
         <arg name="sensor"          value="001252464047"/>
