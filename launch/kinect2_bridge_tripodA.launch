@@ -4,7 +4,7 @@
         <arg name="base_name"       value="kinect2_tripodA"/>
         <arg name="sensor"          value="001252464047"/>
         <arg name="publish_tf"      value="true"/>
-        <arg name="fps_limit"       value="30"/>
+        <arg name="fps_limit"       value="$(arg fps_limit)"/>
         <!--<arg name="depth_method"    value="cuda"/>-->
         <!--<arg name="reg_method"      value="opencl"/>-->
     </include>
