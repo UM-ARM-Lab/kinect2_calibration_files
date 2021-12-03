@@ -13,7 +13,7 @@ translation: !!opencv-matrix
    rows: 3
    cols: 1
    dt: d
-   data: [ -5.2145649545984503e-02, 1.3311961388828405e-04,
+   data: [ -8.3145649545984503e-02, 1.3311961388828405e-04,
        -1.1854960989493690e-02 ]
 essential: !!opencv-matrix
    rows: 3
