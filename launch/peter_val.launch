@@ -5,12 +5,14 @@
   <include file="$(find lightweight_vicon_bridge)/launch/vicon_bridge.launch">
   </include>
 
-  <include file="$(find lightweight_vicon_bridge)/launch/mocap_to_kinect_static_transforms.launch">
-  </include>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_victor_head_mocap_tf_shim_broadcaster" required="true"
+        args="0.034604 0.017626 -0.032391
+              0.51701 -0.51104 0.48439 -0.48673
+              mocap_Kinect2VictorHead_Kinect2VictorHead   kinect2_victor_head_link">
+      <param name="use_sim_time" value="$(arg use_sim_time)"/>
+  </node>
+
 
   <include file="$(find lightweight_vicon_bridge)/launch/mocap_to_val_static_transform.launch">
   </include>
-
-  <node pkg="tf2_ros" type="static_transform_publisher" name="world_broadcaster" required="true" args="0 0 -1.191 0 0 0 1 mocap_world world">
-  </node>
 </launch>
