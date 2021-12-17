@@ -1,18 +1,26 @@
 <launch>
-  <include file="$(find kinect2_calibration_files)/launch/kinect2_bridge_victor_head.launch">
-  </include>
+  <include file="$(find kinect2_calibration_files)/launch/kinect2_bridge_victor_head.launch"/>
+  <include file="$(find kinect2_calibration_files)/launch/kinect2_bridge_tripodA.launch"/>
 
-  <include file="$(find lightweight_vicon_bridge)/launch/vicon_bridge.launch">
-  </include>
+  <include file="$(find lightweight_vicon_bridge)/launch/vicon_bridge.launch"/>
 
   <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_victor_head_mocap_tf_shim_broadcaster" required="true"
         args="0.034604 0.017626 -0.032391
               0.51701 -0.51104 0.48439 -0.48673
               mocap_Kinect2VictorHead_Kinect2VictorHead   kinect2_victor_head_link">
-      <param name="use_sim_time" value="$(arg use_sim_time)"/>
   </node>
 
+    <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_tripodA_mocap_tf_shim_broadcaster" required="true"
+          args="0.029986 0.009266 -0.027604
+                -0.50794 0.54307 -0.47264 0.47296
+                mocap_Kinect2TripodA_Kinect2TripodA   kinect2_tripodA_link"/>
 
-  <include file="$(find lightweight_vicon_bridge)/launch/mocap_to_val_static_transform.launch">
-  </include>
+  <node pkg="tf2_ros" type="static_transform_publisher" name="mocap_left_tool_tf_shim_broadcaster" required="true"
+        args="-0.016 0 0 0 0 0 mocap_RightHand0_RightHand0 mocap_left_tool"/>
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="mocap_right_tool_tf_shim_broadcaster" required="true"
+        args="-0.016 0 0 0 0 0 mocap_Pelvis1_Pelvis1 mocap_right_tool"/>
+
+
+  <include file="$(find lightweight_vicon_bridge)/launch/mocap_to_val_static_transform.launch"/>
 </launch>
