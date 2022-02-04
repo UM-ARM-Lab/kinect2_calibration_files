@@ -9,6 +9,10 @@
 
   <include file="$(find lightweight_vicon_bridge)/launch/vicon_bridge.launch"/>
 
+  <!-- always start with this transform as 0 when calibrating -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_victor_head_mocap_tf_shim_broadcaster" required="true"
+        args="0 0 0 0 0 0 mocap_Kinect2VictorHead_Kinect2VictorHead kinect2_victor_head_link"/>
+
   <node pkg="aruco_detect" type="aruco_detect" name="aruco_detect" args="">
     <param name="fiducial_len" value="0.14"/>
     <param name="publish_images" value="true"/>
