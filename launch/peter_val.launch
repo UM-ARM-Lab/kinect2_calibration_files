@@ -7,7 +7,7 @@
   </include>
 
   <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_victor_head_mocap_tf_shim_broadcaster" required="true"
-        args="0.01492 -0.00593 0.01387 0.03905 0.01103 0.00819
+        args="-0.00384 0.00633 0.01463 0.02377 0.04092 0.01442
               mocap_Kinect2VictorHead_Kinect2VictorHead kinect2_victor_head_link">
   </node>
 
