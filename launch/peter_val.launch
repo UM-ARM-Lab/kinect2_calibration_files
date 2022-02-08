@@ -12,7 +12,7 @@
   </node>
 
     <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_tripodA_mocap_tf_shim_broadcaster" required="true"
-          args="0.00654 0.02465 0.00117 0.10311 0.05297 0.04208
+          args="0.00705 0.03523 0.01098 0.09925 0.05328 0.13217
                 mocap_Kinect2TripodA_Kinect2TripodA kinect2_tripodA_link"/>
 
   <include file="$(find lightweight_vicon_bridge)/launch/mocap_to_val_static_transform.launch"/>
