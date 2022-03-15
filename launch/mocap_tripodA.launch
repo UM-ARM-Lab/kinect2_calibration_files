@@ -1,0 +1,13 @@
+<launch>
+  <include file="$(find kinect2_calibration_files)/launch/kinect2_bridge_tripodA.launch"/>
+
+  <include file="$(find lightweight_vicon_bridge)/launch/vicon_bridge.launch">
+    <arg name="publish_raw_markers" value="true"/>
+  </include>
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_tripodA_mocap_tf_shim_broadcaster" required="true"
+        args="0.03128 0.04221 -0.00254 0.09590 0.03306 0.06318
+              mocap_Kinect2TripodA_Kinect2TripodA kinect2_tripodA_link"/>
+
+  <include file="$(find lightweight_vicon_bridge)/launch/mocap_to_val_static_transform.launch"/>
+</launch>
