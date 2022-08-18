@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-roslaunch kinect2_calibration_files kinect2_respawn_hack_step4.launch $@ 2> /tmp/Error
-chmod 666 /tmp/Error
-ERROR=$(</tmp/Error)
+roslaunch kinect2_calibration_files kinect2_respawn_hack_step4.launch $@ 2> ~/kinect2_errors.log
+chmod 666 ~/kinect2_errors.log
+ERROR=$(<~/kinect2_errors.log)
 echo
 echo
 echo
