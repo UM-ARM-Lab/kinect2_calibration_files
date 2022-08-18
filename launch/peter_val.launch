@@ -1,19 +1,19 @@
 <launch>
-  <include file="$(find kinect2_calibration_files)/launch/kinect2_bridge_victor_head.launch"/>
+  <include file="$(find kinect2_calibration_files)/launch/kinect2_bridge_roof.launch"/>
   <include file="$(find kinect2_calibration_files)/launch/kinect2_bridge_tripodA.launch"/>
 
   <include file="$(find lightweight_vicon_bridge)/launch/vicon_bridge.launch">
     <arg name="publish_raw_markers" value="true"/>
   </include>
 
-  <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_victor_head_mocap_tf_shim_broadcaster" required="true"
+  <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_roof_mocap_tf_shim_broadcaster" required="true"
         args="-0.00384 0.00633 0.01463 0.02377 0.04092 0.01442
-              mocap_Kinect2VictorHead_Kinect2VictorHead kinect2_victor_head_link">
+              mocap_kinect2_roof_kinect2_roof kinect2_roof_link">
   </node>
 
     <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_tripodA_mocap_tf_shim_broadcaster" required="true"
           args="0.00705 0.03523 0.01098 0.09925 0.05328 0.13217
-                mocap_Kinect2TripodA_Kinect2TripodA kinect2_tripodA_link"/>
+                mocap_kinect2_tripodA_kinect2_tripodA kinect2_tripodA_link"/>
 
   <include file="$(find lightweight_vicon_bridge)/launch/mocap_to_val_static_transform.launch"/>
 </launch>
