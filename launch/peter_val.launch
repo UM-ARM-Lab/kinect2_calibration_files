@@ -2,17 +2,15 @@
   <include file="$(find kinect2_calibration_files)/launch/kinect2_bridge_roof.launch"/>
   <include file="$(find kinect2_calibration_files)/launch/kinect2_bridge_tripodA.launch"/>
 
-  <include file="$(find lightweight_vicon_bridge)/launch/vicon_bridge.launch">
-    <arg name="publish_raw_markers" value="true"/>
-  </include>
+  <include file="$(find lightweight_vicon_bridge)/launch/vicon_bridge.launch"/>
 
   <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_roof_mocap_tf_shim_broadcaster" required="true"
-        args="-0.00384 0.00633 0.01463 0.02377 0.04092 0.01442
+        args="0.10041 0.08065 0.04007 -0.04122 0.05992 -0.08918
               mocap_kinect2_roof_kinect2_roof kinect2_roof_link">
   </node>
 
     <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_tripodA_mocap_tf_shim_broadcaster" required="true"
-          args="0.00705 0.03523 0.01098 0.09925 0.05328 0.13217
+          args="0.05073 0.00596 0.02722 -0.03639 -0.05723 0.01286
                 mocap_kinect2_tripodA_kinect2_tripodA kinect2_tripodA_link"/>
 
   <include file="$(find lightweight_vicon_bridge)/launch/mocap_to_val_static_transform.launch"/>
