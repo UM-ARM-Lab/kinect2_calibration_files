@@ -14,4 +14,7 @@
                 mocap_kinect2_tripodA_kinect2_tripodA kinect2_tripodA_link"/>
 
   <include file="$(find lightweight_vicon_bridge)/launch/mocap_to_val_static_transform.launch"/>
+
+  <node pkg="link_bot_perception" type="merge_pointclouds" name="merge_pointclouds" output="screen"
+            args="points1:=/kinect2_tripodA/qhd/points points2:=/kinect2_roof/qhd/points"/>
 </launch>
