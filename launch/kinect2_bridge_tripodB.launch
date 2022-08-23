@@ -1,0 +1,12 @@
+<launch>
+  <arg name="fps_limit" default="30"/>
+    <include file="$(find kinect2_calibration_files)/launch/kinect2_respawn_hack_step1.launch">
+        <arg name="base_name"       value="kinect2_tripodB"/>
+        <arg name="sensor"          value="001198264047"/>
+        <arg name="publish_tf"      value="true"/>
+        <arg name="fps_limit"       value="$(arg fps_limit)"/>
+        <!--<arg name="depth_method"    value="cuda"/>-->
+        <!--<arg name="reg_method"      value="opencl"/>-->
+    </include>
+
+</launch>
