@@ -5,12 +5,12 @@
   <include file="$(find lightweight_vicon_bridge)/launch/vicon_bridge.launch"/>
 
   <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_roof_mocap_tf_shim_broadcaster" required="true"
-        args="0.10041 0.08065 0.04007 -0.04122 0.05992 -0.08918
+        args="0.10647 -0.00546 0.01839 -0.02449 0.05631 -0.13803
               mocap_kinect2_roof_kinect2_roof kinect2_roof_link">
   </node>
 
     <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_tripodA_mocap_tf_shim_broadcaster" required="true"
-          args="0.05073 0.00596 0.02722 -0.03639 -0.05723 0.01286
+          args="0.06214 0.00665 -0.00698 -0.03611 -0.06405 0.02344
                 mocap_kinect2_tripodA_kinect2_tripodA kinect2_tripodA_link"/>
 
   <include file="$(find lightweight_vicon_bridge)/launch/mocap_to_val_static_transform.launch"/>

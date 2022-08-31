@@ -1,0 +1,15 @@
+<launch>
+  <include file="$(find kinect2_calibration_files)/launch/kinect2_bridge_roof.launch"/>
+  <include file="$(find lightweight_vicon_bridge)/launch/vicon_bridge.launch"/>
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="kinect2_roof_mocap_tf_shim_broadcaster" required="true"
+        args="0 0 0 0 0 0 mocap_kinect2_roof_kinect2_roof kinect2_roof_link">
+  </node>
+
+  <include file="$(find aruco_detect)/launch/aruco_detect.launch">
+    <arg name="fiducial_len" value="0.129"/>
+    <arg name="camera"  value="/kinect2_roof/qhd"/>
+    <arg name="image"  value="image_color_rect"/>
+  </include>
+
+</launch>
